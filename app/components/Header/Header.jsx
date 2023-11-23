@@ -1,4 +1,3 @@
-import Framer from "@/app/assets/icons/framer";
 import { FaPlus } from "react-icons/fa";
 import { RiLayout2Fill } from "react-icons/ri";
 import { FaDatabase } from "react-icons/fa6";

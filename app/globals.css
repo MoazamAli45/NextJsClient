@@ -25,3 +25,9 @@
 body {
   font-family: "Inter", sans-serif;
 }
+
+.image-1 {
+  background-image: url("../public/dashboard/pic1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

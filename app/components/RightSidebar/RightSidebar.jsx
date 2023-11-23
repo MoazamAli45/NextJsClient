@@ -50,8 +50,13 @@ const RightSidebar = ({ show, onClose }) => {
           </div>
         </div>
       </div>
-      {show && (
-        <div className="relative block md:hidden w-[320px] bg-black border-t-[1px] border-solid border-[#1D1D1D] min-h-[100vh] z-10">
+      {
+        // <div className="relative block md:hidden w-[320px] bg-black border-t-[1px] border-solid border-[#1D1D1D] min-h-[100vh] z-10">
+        <div
+          className={`fixed top-0  right-0 md:hidden w-[300px] h-full bg-black  overflow-hidden transition-transform transform ${
+            show ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
           <span
             className="bg-[#333333] p-[10px] rounded-full  ml-[20px] mt-[20px] block md:hidden absolute -top-[7px] left-[2px] "
             onClick={handleCloseNavList}
@@ -89,7 +94,7 @@ const RightSidebar = ({ show, onClose }) => {
             </div>
           </div>
         </div>
-      )}
+      }
     </>
   );
 };

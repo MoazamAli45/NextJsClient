@@ -36,8 +36,13 @@ const LeftSidebar = ({ show, onClose }) => {
           </div>
         </div>
       </div>
-      {show && (
-        <div className="block relative md:hidden w-[300px] bg-black border-t-[1px] border-solid border-[#1D1D1D] min-h-[100vh] z-10">
+      {
+        // <div className="block relative md:hidden w-[300px] bg-black border-t-[1px] border-solid border-[#1D1D1D] min-h-[100vh] z-10">
+        <div
+          className={`fixed top-0 left-0 md:hidden w-full xs:w-[300px] h-full bg-black  overflow-hidden transition-transform transform ${
+            show ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
           <span
             className="bg-[#333333] p-[10px] rounded-full  ml-[20px] mt-[20px] block md:hidden absolute -top-[7px] right-1 "
             onClick={handleCloseNavList}
@@ -68,7 +73,7 @@ const LeftSidebar = ({ show, onClose }) => {
             </div>
           </div>
         </div>
-      )}
+      }
     </>
   );
 };

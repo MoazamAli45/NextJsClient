@@ -8,8 +8,14 @@ import { PiAlignBottomSimpleFill } from "react-icons/pi";
 import { PiAlignCenterVerticalFill } from "react-icons/pi";
 import { PiAlignCenterHorizontalFill } from "react-icons/pi";
 import RightAccordian from "../RightAccordian/RightAccordian";
-
-const RightSidebar = ({ show }) => {
+import { IoClose } from "react-icons/io5";
+import { useState } from "react";
+const RightSidebar = ({ show, onClose }) => {
+  const [closeRightNavList, setCloseRightNavList] = useState(false);
+  const handleCloseNavList = () => {
+    setCloseRightNavList(false);
+    onClose(false);
+  };
   return (
     <>
       <div className="hidden md:block  w-[23%] bg-black border-t-[1px] border-solid border-[#1D1D1D] min-h-[90vh]">
@@ -45,8 +51,14 @@ const RightSidebar = ({ show }) => {
         </div>
       </div>
       {show && (
-        <div className="block md:hidden w-[320px] bg-black border-t-[1px] border-solid border-[#1D1D1D] min-h-[100vh] z-10">
-          <div className="flex flex-col w-[90%] mx-auto py-[30px]">
+        <div className="relative block md:hidden w-[320px] bg-black border-t-[1px] border-solid border-[#1D1D1D] min-h-[100vh] z-10">
+          <span
+            className="bg-[#333333] p-[10px] rounded-full  ml-[20px] mt-[20px] block md:hidden absolute -top-[7px] left-[2px] "
+            onClick={handleCloseNavList}
+          >
+            <IoClose color="white" />
+          </span>
+          <div className="flex flex-col w-[90%] mx-auto py-[30px] my-[30px]">
             <div className="flex gap-[10px] w-full justify-center pb-[10px] border-b-[1px] border-solid border-[#262626]">
               <PiAlignLeftSimpleFill className="text-[#888888] text-[22px]" />
               <PiAlignCenterHorizontalSimpleFill className="text-[#888888] text-[22px]" />

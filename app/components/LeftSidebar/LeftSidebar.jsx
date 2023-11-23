@@ -1,9 +1,16 @@
 "use client";
 import React from "react";
-
+import { IoClose } from "react-icons/io5";
 import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
 import LeftAccordian from "../LeftAccordian/LeftAccordian";
-const LeftSidebar = ({ show }) => {
+import { useState } from "react";
+const LeftSidebar = ({ show, onClose }) => {
+  const [closeLeftNavList, setCloseLeftNavList] = useState(false);
+  const handleCloseNavList = () => {
+    setCloseLeftNavList(false);
+    onClose(false);
+  };
+
   return (
     <>
       <div className="hidden md:block  xl:w-[23%] bg-black border-t-[1px] border-solid border-[#1D1D1D] min-h-[90vh]">
@@ -30,8 +37,14 @@ const LeftSidebar = ({ show }) => {
         </div>
       </div>
       {show && (
-        <div className="block md:hidden w-[300px] bg-black border-t-[1px] border-solid border-[#1D1D1D] min-h-[100vh] z-10">
-          <div className="flex flex-col w-[95%] mx-auto py-[30px]">
+        <div className="block relative md:hidden w-[300px] bg-black border-t-[1px] border-solid border-[#1D1D1D] min-h-[100vh] z-10">
+          <span
+            className="bg-[#333333] p-[10px] rounded-full  ml-[20px] mt-[20px] block md:hidden absolute -top-[7px] right-1 "
+            onClick={handleCloseNavList}
+          >
+            <IoClose color="white" />
+          </span>
+          <div className="flex flex-col w-[95%] mx-auto py-[30px] my-[30px]">
             <div className="flex  flex-col items-center  w-[280px]  ">
               <Tabs aria-label="Options">
                 <Tab key="pages" title="Pages">

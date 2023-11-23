@@ -10,7 +10,7 @@ import profile from "@/public/profile.png";
 import React from "react";
 import FramerDropdown from "../Dropdown/FramerDropdown";
 import Image from "next/image";
-// 888888
+
 const Header = () => {
   return (
     <div className="w-full bg-black py-3 h-[10vh] dark">

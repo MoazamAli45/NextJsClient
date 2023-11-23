@@ -1,0 +1,58 @@
+"use client";
+import React from "react";
+import Header from "@/app/components/Header/Header";
+import LeftSidebar from "@/app/components/LeftSidebar/LeftSidebar";
+import RightSidebar from "@/app/components/RightSidebar/RightSidebar";
+import { AiOutlineMenu } from "react-icons/ai";
+import { IoClose } from "react-icons/io5";
+import { useState } from "react";
+import { BiMenuAltRight, BiMenuAltLeft } from "react-icons/bi";
+const Dashboard = () => {
+  const [showLeftNavList, setShowLeftNavList] = useState(false);
+  const [showRightNavList, setShowRightNavList] = useState(false);
+  const handleShowNavList = () => {
+    setShowLeftNavList((prev) => !prev);
+    setShowRightNavList(false);
+  };
+  const handleShowRightNavList = () => {
+    setShowRightNavList((prev) => !prev);
+    setShowLeftNavList(false);
+  };
+
+  return (
+    <div className="dark">
+      <Header />
+      <div className="flex bg-[#1D1D1D] min-h-[90vh]">
+        <LeftSidebar show={showLeftNavList} />
+        <div className="w-full md:w-[54%]">
+          {/*  Menu */}
+          <div className="flex justify-between w-[90%] mx-auto">
+            <span
+              className="bg-[#333333] p-[10px] rounded-full   mt-[20px] block md:hidden"
+              onClick={handleShowNavList}
+            >
+              {!showLeftNavList ? (
+                <BiMenuAltLeft color="white" />
+              ) : (
+                <IoClose color="white" />
+              )}
+            </span>
+            <span
+              className="bg-[#333333] p-[10px] rounded-full  ml-[20px] mt-[20px] block md:hidden"
+              onClick={handleShowRightNavList}
+            >
+              {!showRightNavList ? (
+                <BiMenuAltRight color="white" />
+              ) : (
+                <IoClose color="white" />
+              )}
+            </span>
+          </div>
+        </div>
+        <RightSidebar show={showRightNavList} />
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;

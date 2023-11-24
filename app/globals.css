@@ -25,9 +25,65 @@
 body {
   font-family: "Inter", sans-serif;
 }
+/* .react-tabs__tab {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000000;
+  padding: 1rem 1rem;
+  border-radius: 3rem;
+  border: 1px solid #000000;
+  background: white;
+  margin-inline: 10px;
 
-.image-1 {
-  background-image: url("../public/dashboard/pic1.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.react-tabs__tab-list {
+  border: none;
+}
+.react-tabs__tab-panel {
+  border: none;
+}
+.react-tabs__tab--selected {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  padding: 1rem 1rem;
+  border-radius: 3rem;
+  border: 1px solid #000000;
+  background: black;
+  margin-inline: 10px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+} */
+@media only screen and (max-width: 1024px) {
+  .navigation {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #00000084;
+    display: none;
+  }
+
+  .menu {
+    width: 15rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #242323;
+    z-index: 200;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+  }
+
+  .show__menu {
+    display: block;
+  }
 }

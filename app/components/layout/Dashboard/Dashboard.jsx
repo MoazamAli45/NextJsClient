@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import Header from "@/app/components/Header/Header";
-import LeftSidebar from "@/app/components/LeftSidebar/LeftSidebar";
-import RightSidebar from "@/app/components/RightSidebar/RightSidebar";
+import Header from "../../dashboardComponents/Header/Header";
+import LeftSidebar from "../../dashboardComponents/LeftSidebar/LeftSidebar";
+import RightSidebar from "../../dashboardComponents/RightSidebar/RightSidebar";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
 import { useState } from "react";

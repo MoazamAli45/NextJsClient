@@ -1,15 +1,15 @@
 "use client";
 import React from "react";
-import Header from "@/app/components/Header/Header";
-import LeftSidebar from "@/app/components/LeftSidebar/LeftSidebar";
-import RightSidebar from "@/app/components/RightSidebar/RightSidebar";
+import Header from "../../dashboardComponents/Header/Header";
+import LeftSidebar from "../../dashboardComponents/LeftSidebar/LeftSidebar";
+import RightSidebar from "../../dashboardComponents/RightSidebar/RightSidebar";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 import { BiMenuAltRight, BiMenuAltLeft } from "react-icons/bi";
 import { FaPlus } from "react-icons/fa6";
 import { RiLayoutGridFill } from "react-icons/ri";
 import { FiSearch } from "react-icons/fi";
-import LastViewDropdown from "@/app/components/LastViewDropdown/LastViewDropdown";
+import LastViewDropdown from "../../dashboardComponents/LastViewDropdown/LastViewDropdown";
 import cardPic from "@/public/dashboard/whitebg.png";
 import Image from "next/image";
 const DashboardProject = () => {

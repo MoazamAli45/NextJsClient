@@ -18,13 +18,17 @@ export default function LastViewDropdown() {
         </span>
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions">
-        <DropdownItem key="new" className="text-white " color="primary">
+        <DropdownItem key="Last View" className="text-white " color="primary">
           Last viewed by me
         </DropdownItem>
-        <DropdownItem key="copy" className="text-white  " color="primary">
+        <DropdownItem key="Last edit" className="text-white  " color="primary">
           Last edited
         </DropdownItem>
-        <DropdownItem key="edit" className="text-white  " color="primary">
+        <DropdownItem
+          key="Alphabetically"
+          className="text-white  "
+          color="primary"
+        >
           Alphabetically
         </DropdownItem>
       </DropdownMenu>

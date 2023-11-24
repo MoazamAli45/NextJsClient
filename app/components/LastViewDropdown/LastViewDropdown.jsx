@@ -14,7 +14,7 @@ export default function LastViewDropdown() {
       <DropdownTrigger>
         <span className="    flex items-center justify-center   gap-[2px] text-[12px] sm:text-[14px] text-[#989898]">
           Last viewed by me
-          <MdKeyboardArrowDown color="#989898" />
+          <MdKeyboardArrowDown color="#989898" className="text-[16px] " />
         </span>
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions">

@@ -19,6 +19,9 @@ module.exports = {
         xs: "380px",
         "3xl": "1609px",
       },
+      backgroundColor: {
+        background: "rgba(14, 13, 13, .5)", // Adjust the values as needed
+      },
     },
   },
   darkMode: "class",
